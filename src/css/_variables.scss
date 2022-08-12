@@ -1,0 +1,67 @@
+// Colors
+$white: #fff;
+$black: #000;
+
+$gray-100: #f0f2f2;
+$gray-200: #d2d6d6;
+$gray-300: #cccbcb;
+$gray-400: #acabab;
+$gray-500: #999;
+$gray-600: #898890;
+$gray-700: #333;
+$gray-800: #333;
+$gray-900: #333;
+
+$red-100: #ff6243;
+$red-200: #dc3b14  ;
+$red-300: #cd2a00;
+
+$green-100: #00ccb3;
+$green-200: #00bca5;
+$green-300: #00b39d;
+
+$blue-100: #78b9eb;
+$blue-200: #479bdb;
+$blue-300: #1e81ce;
+
+$yellow-100: #ffa733;
+$yellow-200: #b7b156;
+
+$font-color: $gray-700;
+$placeholder-color: $gray-600;
+
+
+// Fonts
+$font-family-base: 'Roboto', sans-serif;
+$font-family-second: $font-family-base;
+
+
+// Box-shadows
+$card-box-shadow: 1px 1px 4px rgba($black,.14);
+$card-box-shadow-hover: 2px 2px 8px rgba($black,.34);
+
+
+// Borders
+$border-color: $gray-400;
+$border-color-hover: $gray-700;
+$border-color-focus: $green-300;
+$border-color-invalid: $red-200;
+$border-width: 1px;
+$border-radius: 3px;
+
+
+// Margins
+$card-margin: 10px;
+
+
+// Paddings
+$container-padding: 30px;
+$section-padding: 50px;
+$card-padding: 20px;
+$form-padding-y: 8px;
+$form-padding-x: 12px;
+
+
+// Transitions
+$transition-card: .2s;
+$transition-link: .15s;

@@ -1,0 +1,29 @@
+.article {
+  width: 75%;
+  margin: 0 auto;
+
+  &__heading {
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding-bottom: $card-padding;
+    border-bottom: $border-width*4 solid $gray-100;
+
+    &::before, &::after {
+      @extend .pseudoel;
+      top: 100%;
+      width: 10%;
+      height: $border-width*4;
+      background: $gray-200;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+}

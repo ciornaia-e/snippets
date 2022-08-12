@@ -1,0 +1,122 @@
+.table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  text-align: left;
+}
+
+.table-caption {
+  padding: $form-padding-x*2;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: darken($yellow-100, 10);
+}
+
+.table-row {
+  border-top: $border-width solid $border-color;
+  border-bottom: $border-width solid $border-color;
+
+  &:hover {
+    .table-cell {
+      background: lighten($blue-100, 10);
+    }
+  }
+}
+
+.table-hcell, .table-cell, .table-fcell {
+  padding: $form-padding-y $form-padding-x;
+}
+
+.table-hcell {
+  font-weight: 500;
+  background: lighten($yellow-100, 10);
+}
+
+.table-fcell {
+  font-weight: 400;
+  background: $blue-100;
+}
+
+.table-cell {
+  font-weight: 300;
+  transition: $transition-link;
+  background: $white;
+}
+
+
+// Table slider
+.table-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.table-item {
+  width: 100%;
+  will-change: transform;
+  transition: all .5s ease;
+
+  &:not(.-curr-item) {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    left: 0;
+    transform: translate(16%, -50%) scale(.9);
+  }
+
+  &.-prev-item, &.-next-item {
+    left: 0;
+    opacity: .3;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  &.-curr-item {
+    position: relative;
+    z-index: 3;
+    box-shadow: 0 0 50px $black;
+    transform: none;
+  }
+
+  &.-curr-item ~ * {
+    transform: translate(-16%, -50%) scale(.9);
+    z-index: -1;
+  }
+
+  &.-curr-item + * {
+    right: 0;
+    transform: translate(16%, -50%) scale(.9);
+    z-index: 1;
+  }
+
+  &.-prev-item {
+    transform: translate(-16%, -50%) scale(.9);
+  }
+
+  &.-next-item {
+    right: 0;
+    transform: translate(16%, -50%) scale(.9);
+  }
+}
+
+.table-buttons {
+  position: relative;
+  display: flex;
+}
+
+.table-btn {
+  position: absolute;
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+
+  &.btn-prev {
+    left: 0;
+    background: red;
+  }
+
+  &.btn-next {
+    right: 0;
+    background: green;
+  }
+}

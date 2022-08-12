@@ -1,0 +1,42 @@
+.list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+
+  &:not(:last-of-type) {
+    margin-bottom: $card-margin*4;
+  }
+
+  &.unorder-list {
+    .item::before {
+      width: 8px;
+      height: 8px;
+      background: $gray-700;
+      border-radius: 50%;
+    }
+  }
+
+  &.order-list {
+    counter-reset: list;
+
+    .item::before {
+      counter-increment: list;
+      content: counter(list)'.';
+    }
+  }
+}
+
+.item {
+  position: relative;
+  padding-left: $card-padding;
+  margin-bottom: $card-margin;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    @extend .pseudoel, .y-abs-center;
+    left: 0;
+  }
+}

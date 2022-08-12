@@ -1,0 +1,42 @@
+.heading {
+  position: relative;
+  font-weight: 700;
+
+  &.h1 {
+    font-size: 40px;
+    margin: 0 0 $card-margin*6;
+  }
+
+  &.h2 {
+    font-size: 32px;
+    margin: 0 0 $card-margin*4;
+    padding-bottom: 8px;
+
+    &::after {
+      @extend .pseudoel;
+      width: 50px;
+      height: $border-width*4;
+      background: $gray-600;
+      left: 0;
+      top: 100%;
+    }
+  }
+
+  &.h3 {
+    font-size: 28px;
+  }
+
+  &.h4 {
+    font-size: 24px;
+  }
+}
+
+.paragraph {
+  font: {
+    size: 18px;
+    weight: 300;
+  }
+  line-height: 1.5;
+  letter-spacing: .08em;
+  margin: 0 0 $card-margin*2;
+}

@@ -1,0 +1,107 @@
+.buttons-group {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: -$card-margin;
+  margin-right: -$card-margin;
+}
+
+.button-wrapper {
+  margin: 0 $card-margin $card-margin*2;
+}
+
+.btn {
+  @extend .xy-flex-center;
+  position: relative;
+  height: 50px;
+  min-width: 200px;
+  padding: $card-padding/2 $card-padding;
+  background: $green-200;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: .08em;
+  white-space: nowrap;
+  overflow: hidden;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1;
+  transition: all $transition-link;
+
+  &:focus {
+    transform: scale(.98);
+  }
+
+  &-circle {
+    border-radius: 60px;
+  }
+
+  &-gradient {
+    @extend .xy-flex-center;
+    display: inline-flex;
+    background-position: 0 0;
+    overflow: hidden;
+    transition: all .4s ease-in-out;
+
+    &:hover {
+      transition: all .4s ease-in-out;
+    }
+
+    &-x {
+      background-size: 300% auto;
+      background-image: linear-gradient(90deg, #c4e538, #009432, #c4e538);
+
+      &:hover {
+        background-position: 100% 0;
+      }
+    }
+
+    &-y {
+      background-size: auto 300%;
+      background-image: linear-gradient(0deg, #ffc312, #ee5a24, #ffc312);
+
+      &:hover {
+        background-position: 0 100%;
+      }
+    }
+  }
+
+  &-outline {
+    border: $border-width*2 solid $red-200;
+    background: transparent;
+    border-radius: $border-radius;
+    transition: all $transition-card;
+
+    .btn__text {
+      color: $red-200;
+    }
+
+    &:hover {
+      background: $red-200;
+
+      .btn__text {
+        color: $white;
+      }
+    }
+  }
+
+  &-fullwidth {
+    width: 100%;
+
+    &:hover {
+      background: lighten($green-200, 2px);
+    }
+  }
+
+  &__text {
+    position: relative;
+    color: $white;
+    font: {
+      size: 18px;
+      weight: 500;
+      family: $font-family-base;
+    }
+    z-index: 1;
+  }
+}
